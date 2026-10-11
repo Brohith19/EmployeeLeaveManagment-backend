@@ -9,6 +9,7 @@ import com.employeleave.repository.EmployeeRepository;
 import com.employeleave.repository.UserRepository;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 import java.util.Locale;
 
 @Configuration
+@ConditionalOnProperty(name = "app.seed-demo-data", havingValue = "true", matchIfMissing = true)
 public class EmployeeAccountInitializer {
 
     @Bean

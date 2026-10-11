@@ -1,0 +1,7 @@
+target/
+*.log
+error.txt
+newerror*.txt
+.idea/
+.vscode/
+*.iml
